@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Note Authentication</title>
+</head>
+
+<body>
+    <h1>Bank Notes Authentication</h1>
+    <center>
+        {% if result %}
+        <h1>The Given Note is : {{ result }}</h1>
+        {% endif %}
+    </center>
+    <form method="post" action="/predict">
+        <label>Skewness</label>
+        <input type="text" name="skewness"><br><br>
+        <label>Varience</label>
+        <input type="text" name="varience"><br><br>
+        <label>Curtosys</label>
+        <input type="text" name="curtosys"><br><br>
+        <label>Entropy </label>
+        <input type="text" name="entropy"><br><br>
+        <input type="submit" value="Predict"><br><br>
+    </form>
+</body>
+
+</html>
